@@ -1,27 +1,82 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import img from "../../../assets/23214909_1164.png";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navItems = (
     <>
       <li className="font-semibold">
-        <NavLink to='/' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "text-blue-500" : "default")}
+        >
+          Home
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to='/allToys' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>All Toys</NavLink>
+        <NavLink
+          to="/allToys"
+          className={({ isActive }) => (isActive ? "text-blue-500" : "default")}
+        >
+          All Toys
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to='/blogs' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Blogs</NavLink>
+        <NavLink
+          to="/blogs"
+          className={({ isActive }) => (isActive ? "text-blue-500" : "default")}
+        >
+          Blogs
+        </NavLink>
       </li>
-      <li className="font-semibold">
-        <NavLink to='/myToys' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>My Toys</NavLink>
-      </li>
-      <li className="font-semibold">
-        <NavLink to='/addToy' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Add Toy</NavLink>
-      </li>
-      <li className="font-semibold">
-        <NavLink to='/login' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Login</NavLink>
-      </li>
+      {user?.email ? (
+        <>
+          <li className="font-semibold">
+            <NavLink
+              to="/myToys"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : "default"
+              }
+            >
+              My Toys
+            </NavLink>
+          </li>
+          <li className="font-semibold">
+            <NavLink
+              to="/addToy"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : "default"
+              }
+            >
+              Add Toy
+            </NavLink>
+          </li>
+          <li>
+            <button className="btn btn-ghost" onClick={handleLogOut}>
+              LogOut
+            </button>
+          </li>
+        </>
+      ) : (
+        <li className="font-semibold">
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "text-blue-500" : "default"
+            }
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -57,9 +112,16 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navItems}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navItems}</ul>
+        {user?.email ? (
+          <div className="avatar">
+            <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <img src={user?.photoURL} />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="navbar-end">
         <button className="btn btn-outline btn-success">Gift Boucher</button>
