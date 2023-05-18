@@ -1,3 +1,9 @@
+import {
+  FaClock,
+  FaEnvelope,
+  FaLocationArrow,
+  FaPhone
+} from "react-icons/fa";
 import img from "../../../assets/23214909_1164.png";
 
 const Footer = () => {
@@ -13,10 +19,19 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Company Information</span>
-          <a className="link link-hover font-semibold">4005, Silver business point Bangladesh</a>
-          <a className="link link-hover font-semibold">+91 123456789</a>
-          <a className="link link-hover font-semibold">9.00AM - 6.00PM</a>
-          <a className="link link-hover font-semibold">info@gmail.com</a>
+          <a className="link link-hover font-semibold flex flex-row items-center justify-center gap-2">
+            <FaLocationArrow className="text-success" />{" "}
+            <span>4005, Silver business point Bangladesh</span>
+          </a>
+          <a className="link link-hover font-semibold flex flex-row items-center justify-center gap-2">
+            <FaPhone className="text-success" /> <span>+91 123456789</span>
+          </a>
+          <a className="link link-hover font-semibold flex flex-row items-center justify-center gap-2">
+            <FaClock className="text-success" /> <span>9.00AM - 6.00PM</span>
+          </a>
+          <a className="link link-hover font-semibold flex flex-row items-center justify-center gap-2">
+            <FaEnvelope className="text-success" /> <span>info@gmail.com</span>
+          </a>
         </div>
         <div>
           <span className="footer-title">Account</span>
