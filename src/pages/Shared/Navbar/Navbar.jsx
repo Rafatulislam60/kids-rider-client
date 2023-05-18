@@ -4,22 +4,22 @@ import img from "../../../assets/23214909_1164.png";
 const Navbar = () => {
   const navItems = (
     <>
-      <li>
+      <li className="font-semibold">
         <Link to='/' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Home</Link>
       </li>
-      <li>
+      <li className="font-semibold">
         <Link to='/allToys' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>All Toys</Link>
       </li>
-      <li>
+      <li className="font-semibold">
         <Link to='/blog' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Blogs</Link>
       </li>
-      <li>
+      <li className="font-semibold">
         <Link to='/myToys' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>My Toys</Link>
       </li>
-      <li>
+      <li className="font-semibold">
         <Link to='/addToy' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Add Toy</Link>
       </li>
-      <li>
+      <li className="font-semibold">
         <Link to='/login' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Login</Link>
       </li>
     </>

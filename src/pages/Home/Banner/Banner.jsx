@@ -13,7 +13,7 @@ const Banner = () => {
         <p className="my-6 text-xs sm:text-base md:text-lg max-w-2/3 md:max-w-xl max-w-2xl text-gray-900">
           Explore active toy for smart and active kids. Brings fun and non-stop learning for your little ones. Delivering smile with toys. Get your unbeatable fun and learning experience with our creative toy.
         </p>
-        <Link to="/">
+        <Link to="/allToys">
           <button
             type="button"
             className="btn border-none rounded-xl bg-gradient-to-r from-blue-700 to-blue-500"
