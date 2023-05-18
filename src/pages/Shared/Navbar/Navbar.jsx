@@ -1,26 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import img from "../../../assets/23214909_1164.png";
 
 const Navbar = () => {
   const navItems = (
     <>
       <li className="font-semibold">
-        <Link to='/' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Home</Link>
+        <NavLink to='/' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Home</NavLink>
       </li>
       <li className="font-semibold">
-        <Link to='/allToys' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>All Toys</Link>
+        <NavLink to='/allToys' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>All Toys</NavLink>
       </li>
       <li className="font-semibold">
-        <Link to='/blog' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Blogs</Link>
+        <NavLink to='/blogs' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Blogs</NavLink>
       </li>
       <li className="font-semibold">
-        <Link to='/myToys' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>My Toys</Link>
+        <NavLink to='/myToys' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>My Toys</NavLink>
       </li>
       <li className="font-semibold">
-        <Link to='/addToy' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Add Toy</Link>
+        <NavLink to='/addToy' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Add Toy</NavLink>
       </li>
       <li className="font-semibold">
-        <Link to='/login' className={({ isActive }) => isActive ? "text-blue-600" : "default"}>Login</Link>
+        <NavLink to='/login' className={({ isActive }) => isActive ? "text-blue-500" : "default"}>Login</NavLink>
       </li>
     </>
   );
@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline btn-warning">Gift Boucher</button>
+        <button className="btn btn-outline btn-success">Gift Boucher</button>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const Banner = () => {
         <Link to="/allToys">
           <button
             type="button"
-            className="btn border-none rounded-xl bg-gradient-to-r from-blue-700 to-blue-500"
+            className="btn border-none rounded-xl bg-gradient-to-r from-[#1abc9c] to-[#16a085]"
           >
             Shop Now
           </button>
