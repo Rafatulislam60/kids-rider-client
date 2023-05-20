@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "seller": "Rafat",
+    "toyName": "Sports Car",
+    "picture": "https://img.freepik.com/free-psd/white-sport-car_176382-1594.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 29.99,
+    "subCategory": "Sports Car",
+    "rating": 4,
+    "availableQuantity": 10,
+    "detailsDescription": "The sports car toy is a sleek and fast model designed for racing enthusiasts. It comes with realistic features such as opening doors, working headlights, and a friction-powered motor. Suitable for children aged 3 and above."
+  },
+  {
+    "id": "2",
+    "seller": "Adil",
+    "toyName": "Truck",
+    "picture": "https://img.freepik.com/free-psd/3d-illustration-truck-icon_23-2149975063.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 19.99,
+    "subCategory": "Truck",
+    "rating": 4,
+    "availableQuantity": 15,
+    "detailsDescription": "The truck toy is a sturdy and durable model that can handle rough play. It features a movable cargo bed, realistic engine sounds, and flashing lights. Perfect for kids who love construction and transportation vehicles."
+  },
+  {
+    "id": "3",
+    "seller": "Alex",
+    "toyName": "Regular Car",
+    "picture": "https://img.freepik.com/free-psd/3d-illustration-car-icon_23-2149975033.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 14.99,
+    "subCategory": "Regular Car",
+    "rating": 4,
+    "availableQuantity": 20,
+    "detailsDescription": "The regular car toy is a classic model with simple yet attractive design. It has smooth wheels for easy rolling and is made from non-toxic materials. Suitable for children of all ages."
+  },
+  {
+    "id": "4",
+    "seller": "Mamon",
+    "toyName": "Mini Fire Truck",
+    "picture": "https://img.freepik.com/free-psd/3d-rendering-firefighter-icon_23-2149859768.jpg?size=626&ext=jpg&ga=GA1.2.1886416881.1678857576&semt=ais",
+    "price": 12.99,
+    "subCategory": "Mini Fire Truck",
+    "rating": 5,
+    "availableQuantity": 8,
+    "detailsDescription": "The mini fire truck toy is a small-sized replica of a firefighting vehicle. It comes with a ladder that can be raised and rotated, as well as realistic siren sounds. Ideal for kids who dream of becoming firefighters."
+  },
+  {
+    "id": "5",
+    "seller": "John",
+    "toyName": "Mini Police Car",
+    "picture": "https://img.freepik.com/free-psd/police-car-icon-isolated-3d-render-illustration_47987-8331.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 13,
+    "subCategory": "Mini Police Car",
+    "rating": 5,
+    "availableQuantity": 12,
+    "detailsDescription": "The mini police car toy is a compact model designed for law enforcement enthusiasts. It features flashing lights, realistic police siren sounds, and movable doors. Great for kids who love role-playing as police officers."
+  },
+  {
+    "id": "6",
+    "seller": "Rafat",
+    "toyName": "Zip Car",
+    "picture": "https://img.freepik.com/free-psd/3d-illustration-car-icon_23-2149975027.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 18,
+    "subCategory": "Zip Car",
+    "rating": 4,
+    "availableQuantity": 6,
+    "detailsDescription": "The zip car toy is a small and zippy model designed for urban driving. It comes with opening doors, a removable roof, and realistic engine sounds. Perfect for kids who want to imagine driving in the city."
+  },
+  {
+    "id": "7",
+    "seller": "Alex",
+    "toyName": "Bus",
+    "picture": "https://images.unsplash.com/photo-1632435285572-4fdea52e4e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRveSUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "price": 24,
+    "subCategory": "Bus",
+    "rating": 4,
+    "availableQuantity": 9,
+    "detailsDescription": "The bus toy is a large and spacious model that can accommodate multiple toy figures. It has sliding doors, movable wheels, and interior seating. Great for kids who enjoy playing with public transportation toys."
+  },
+  {
+    "id": "8",
+    "seller": "Adil",
+    "toyName": "Mini Bus",
+    "picture": "https://img.freepik.com/free-photo/concept-school-education-with-school-accessories_185193-109803.jpg?size=626&ext=jpg&ga=GA1.2.1886416881.1678857576&semt=ais",
+    "price": 15,
+    "subCategory": "Mini Bus",
+    "rating": 4,
+    "availableQuantity": 7,
+    "detailsDescription": "The mini bus toy is a compact version of a public transportation vehicle. It features opening doors, rolling wheels, and vibrant colors. Suitable for children who like playing with smaller-sized buses."
+  },
+  {
+    "id": "9",
+    "seller": "Smith",
+    "toyName": "Old Model Car",
+    "picture": "https://img.freepik.com/free-photo/toy-car-with-pinecone-top_1252-7.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 21,
+    "subCategory": "Old Model Car",
+    "rating": 4,
+    "availableQuantity": 11,
+    "detailsDescription": "The old model car toy is a nostalgic replica of a vintage automobile. It has a retro design, movable wheels, and a removable top. Perfect for collectors or kids who appreciate classic cars."
+  },
+  {
+    "id": "10",
+    "seller": "Ricardo",
+    "toyName": "Mini Truck",
+    "picture": "https://img.freepik.com/free-photo/green-easter-car-with-eggs-copy-space_23-2149301298.jpg?size=626&ext=jpg&ga=GA1.1.1886416881.1678857576&semt=ais",
+    "price": 17,
+    "subCategory": "Mini Truck",
+    "rating": 4,
+    "availableQuantity": 13,
+    "detailsDescription": "The mini truck toy is a small-sized vehicle designed for transporting goods. It features a detachable cargo bed, rolling wheels, and a realistic design. Suitable for kids who enjoy imaginative play with trucks."
+  }
+]
