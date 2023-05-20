@@ -19,7 +19,7 @@ const Services = () => {
         <p className="text-lg font-semibold text-gray-600">What we provide.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-3">
-        <div className="relative px-3">
+        <div data-aos="zoom-in-right" className="relative px-3">
           <div className="absolute left-40 -top-14 md:left-32 lg:left-28 lg:-top-14">
             <img
               className="w-20 h-20 rounded-full border p-1"
@@ -34,7 +34,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="relative px-3">
+        <div data-aos="zoom-in" className="relative px-3">
           <div className="absolute left-40 -top-14 md:left-32 lg:left-28 lg:-top-14">
             <img
               className="w-20 h-20 rounded-full border p-1"
@@ -49,7 +49,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="relative px-3">
+        <div data-aos="zoom-in" className="relative px-3">
           <div className="absolute left-40 -top-14 md:left-32 lg:left-28 lg:-top-14">
             <img
               className="w-20 h-20 rounded-full border p-1"
@@ -64,7 +64,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="relative px-3">
+        <div data-aos="zoom-in-left" className="relative px-3">
           <div className="absolute left-40 -top-14 md:left-32 lg:left-28 lg:-top-14">
             <img
               className="w-20 h-20 rounded-full border p-1"

@@ -4,7 +4,6 @@ const Details = () => {
   const toys = useLoaderData();
   const {
     seller,
-    _id,
     price,
     availableQuantity,
     rating,

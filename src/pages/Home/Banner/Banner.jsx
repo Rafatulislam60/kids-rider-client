@@ -4,7 +4,7 @@ import banner from '../../../assets/banner.png';
 const Banner = () => {
   return (
     <div className="bg-[#d0f1fd] mb-16 flex lg:flex-row lg:justify-around lg:px-14 mx-auto px-4 py-5">
-      <div>
+      <div  data-aos="fade-right">
         <h1 className="text-2xl font-bold w-full lg:leading-tight sm:text-4xl lg:text-6xl lg:max-w-3xl">
           The Ultimate <br />
           <span className="text-rose-500">Kids Creative</span> <br />
@@ -22,7 +22,7 @@ const Banner = () => {
           </button>
         </Link>
       </div>
-      <div>
+      <div data-aos="fade-left">
         <img src={banner} alt="" />
       </div>
     </div>
