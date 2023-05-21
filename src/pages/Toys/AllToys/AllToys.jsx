@@ -1,41 +1,68 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
-  const toys = useLoaderData();
+  const [toys, setToys] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
+  useEffect(() => {
+    fetch("http://localhost:5000/allToys")
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  });
+  const handleSearch = () => {
+    fetch(`http://localhost:5000/getToysByText/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setToys(data);
+      });
+  };
 
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-compact w-full text-center">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Seller</th>
-            <th>Toy Name</th>
-            <th>Sub-Category</th>
-            <th>Price</th>
-            <th>Available Quantity</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {toys.map((allToy, index) => (
-            <tr key={allToy._id}>
-              <td>{index + 1}</td>
-              <td>{allToy.seller}</td>
-              <td>{allToy.toyName}</td>
-              <td>{allToy.subCategory}</td>
-              <td>{allToy.price}</td>
-              <td>{allToy.availableQuantity}</td>
-              <td>
-                <Link to={`/details/${allToy._id}`}>
-                <button className="btn">View Details</button>
-                </Link>
-              </td>
+    <div>
+      <div className="flex flex-row my-10 justify-center items-center">
+        <input
+          onChange={(e) => setSearchText(e.target.value)}
+          type="text"
+          className="p-1 border-2 border-black rounded-lg mr-3"
+        />
+        <button onClick={handleSearch} className="btn btn-success">
+          Search
+        </button>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="table table-compact w-full text-center">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Seller</th>
+              <th>Toy Name</th>
+              <th>Sub-Category</th>
+              <th>Price</th>
+              <th>Available Quantity</th>
+              <th>Details</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {toys?.map((allToy, index) => (
+              <tr key={allToy._id}>
+                <td>{index + 1}</td>
+                <td>{allToy.seller}</td>
+                <td>{allToy.toyName}</td>
+                <td>{allToy.subCategory}</td>
+                <td>{allToy.price}</td>
+                <td>{allToy.availableQuantity}</td>
+                <td>
+                  <Link to={`/details/${allToy._id}`}>
+                    <button className="btn">View Details</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
