@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 import img from "../../assets/12085707_20944201.jpg";
 import { AuthContext } from "../../provider/AuthProvider";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+
 
 const Login = () => {
   const {signIn} = useContext(AuthContext);
@@ -22,6 +24,15 @@ const Login = () => {
     .then(result => {
         const user = result.user;
         console.log(user);
+        if(user){
+          Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'Login successful',
+              showConfirmButton: false,
+              timer: 1500
+            })
+      }
 
         navigate(from, { replace: true });
 

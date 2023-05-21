@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 import img from "../../assets/12085707_20944201.jpg";
 import { AuthContext } from "../../provider/AuthProvider";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
@@ -21,6 +22,15 @@ const Register = () => {
     .then(result => {
         const user = result.user;
         console.log(user);
+        if(user){
+          Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'Register successful',
+              showConfirmButton: false,
+              timer: 1500
+            })
+      }
     })
     .catch(error => console.log(error))
 
