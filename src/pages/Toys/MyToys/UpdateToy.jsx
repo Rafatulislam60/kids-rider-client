@@ -26,7 +26,7 @@ const UpdateToy = () => {
     };
     console.log(updatedToy);
 
-    fetch(`http://localhost:5000/toy/${_id}`, {
+    fetch(`https://y-liart-alpha.vercel.app/toy/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

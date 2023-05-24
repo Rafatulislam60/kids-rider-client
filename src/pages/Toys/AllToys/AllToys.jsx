@@ -1,29 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
+  const searchRef = useRef(null);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/allToys")
+    fetch(`https://y-liart-alpha.vercel.app/allToys?search=${searchText}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
-  });
+  },[searchText]);
+  
   const handleSearch = () => {
-    fetch(`http://localhost:5000/getToysByText/${searchText}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setToys(data);
-      });
+    console.log(searchRef.current.value);
+        setSearchText(searchRef.current.value);
   };
 
   return (
     <div>
       <div className="flex flex-row my-10 justify-center items-center">
         <input
-          onChange={(e) => setSearchText(e.target.value)}
+          // onChange={(e) => setSearchText(e.target.value)}
+          ref={searchRef}
           type="text"
           className="p-1 border-2 border-black rounded-lg mr-3"
         />

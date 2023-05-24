@@ -38,7 +38,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allToys/${params.id}`),
+          fetch(`https://y-liart-alpha.vercel.app/allToys/${params.id}`),
       },
       {
         path: "myToys",
@@ -47,13 +47,13 @@ const router = createBrowserRouter([
             <MyToys></MyToys>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/toy"),
+        loader: () => fetch("https://y-liart-alpha.vercel.app/toy"),
       },
       {
         path: "myToys/updateToy/:id",
         element: <UpdateToy></UpdateToy>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/myToys/updateToy/${params.id}`),
+          fetch(`https://y-liart-alpha.vercel.app/myToys/updateToy/${params.id}`),
       },
       {
         path: "addToy",
