@@ -5,6 +5,7 @@ import MyToysRow from "./MyToysRow";
 
 const MyToys = () => {
   const toys = useLoaderData();
+  console.log(toys);
   const [myToys, setMyToys] = useState(toys);
 
   const handleDelete = (_id) => {
@@ -37,6 +38,10 @@ const MyToys = () => {
 
   return (
     <div>
+      <div className="btn-group my-5 flex justify-center">
+        <button className="btn btn-active">Price: Low to High</button>
+        <button className="btn">Price: High to Low</button>
+      </div>
       <h2 className="text-4xl text-center font-bold my-5">
         Your bookings: {toys.length}
       </h2>
